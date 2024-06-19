@@ -16,8 +16,9 @@ function App() {
   }, [tasks]);
 
   useEffect(() => {
-    if (getLocalStorage().length === 0) {
+    if (tasks.length === 0) {
       initLocalStorage();
+      setTasks(getLocalStorage());
     }
   }, []);
 

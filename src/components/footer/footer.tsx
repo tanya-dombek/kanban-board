@@ -8,7 +8,7 @@ type TFooter = {
 const Footer: FC<TFooter> = ({tasks}) => {
   const tasksAmount = (boxName: string) => {
     const currentBox = tasks.find(item => item.title.toLowerCase() === boxName.toLowerCase());
-    return currentBox ? currentBox.issues.length : '';
+    return currentBox ? currentBox.issues.length : 0;
   }
 
     return (
