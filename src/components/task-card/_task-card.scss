@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+
+.task-card-container {
+    background-color: $task-background;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 25px auto;
+    width: 90%;
+    height: 80vh;
+
+    .header-section{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+
+        h2 {
+            @include font-style(24px, $main-font-color, 28.13px);
+        }
+
+        .modal-btns {
+            display: flex;
+            gap: 8px;
+    
+            div {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+    
+            .edit-btn {
+                background-image: url("../../utils/img/edit-icon.svg");
+    
+                &:hover {
+                    background-image: url("../../utils/img/edit-icon-black.svg");
+                }
+            }
+        
+            .close-btn {
+                background-image: url("../../utils/img/close-icon.svg");
+    
+                &:hover {
+                    background-image: url("../../utils/img/close-icon-black.svg");
+                }
+            }
+        }
+    }
+
+    .edit-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        textarea {
+            @include input-styles;
+            border: 1px solid $add-btn-font-color;
+            max-width: 70%;
+            max-height: 60vh;
+            overflow: auto;
+            @include scroll-style($task-background);
+        }
+    }
+
+    p {
+        @include font-style(18px, $main-font-color, 21.09px);
+        width: 625px;
+    }
+}

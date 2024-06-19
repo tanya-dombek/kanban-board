@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+header {
+    background-color: $header-background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    @include font-style(28px, $header-font-color, 32.81px);
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: relative;
+
+        .user-img {
+            background-color: $header-font-color;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .arrow-up {
+            transform: rotate(180deg);
+        }
+
+        button {
+            @include icon-btn;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        justify-content: flex-end;
+        background-color: $background-color;
+
+        p {
+            display: none;
+        }
+    }
+}

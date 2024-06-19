@@ -1,0 +1,57 @@
+$background-color: #0079BF;
+$header-background: #0067A3;
+$task-box-background: #EBECF0;
+$task-background: #FFFFFF;
+
+$main-font-color: #000000;
+$header-font-color: $task-background;
+$add-btn-font-color: #5E6C84;
+
+$submit-button-color: $background-color;
+$btn-hover: #DEDEDE;
+
+
+@mixin font-style($fontSize, $fontColor, $lineHeight) {
+    font-size: $fontSize;
+    color: $fontColor;
+    line-height: $lineHeight;
+}
+
+@mixin icon-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+@mixin task-field {
+    width: 100%;
+    background-color: $task-background;
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
+    @include font-style(18px, $main-font-color, 21.09px);
+}
+
+@mixin scroll-style($color) {
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;
+        border-radius: 10px;
+        border: 3px solid $color;
+    }
+}
+
+@mixin input-styles {
+    @include task-field;
+
+    &:focus {
+        outline: none;
+    }
+}

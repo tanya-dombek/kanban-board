@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    @include icon-btn;
+    @include font-style(18px, $add-btn-font-color, 21.09px);
+    width: 102px;
+
+    &:hover {
+        background-color: $task-background;
+        border-radius: 5px;
+    }
+}
+
+.submit-btn {
+    background-color: $submit-button-color;
+    padding: 4px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    @include font-style(18px, $header-font-color, 21.09px);
+    width: 102px;
+
+    &:hover {
+        background-color: $header-background;
+    }
+}
+
+.disabled {
+    cursor: not-allowed;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

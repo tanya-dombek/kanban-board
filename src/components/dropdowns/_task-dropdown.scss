@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.dropdown-placeholder {
+    color: $add-btn-font-color;
+}
+
+.dropdown-menu {
+    @include task-field;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: $add-btn-font-color;
+    margin-top: 5px;
+    cursor: pointer;
+    max-height: 200px;
+    overflow: auto;
+    @include scroll-style($task-background);
+
+    .Dropdown-option:hover {
+        color: $main-font-color;
+    }
+}
+
+.dropdown-control {
+    display: flex;
+    justify-content: space-between;
+    @include task-field;
+    cursor: pointer;
+}
+
+.arrow-closed {
+    background-image: url('../../utils/img/task-arrow.svg');
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-open {
+    @extend .arrow-closed;
+    transform: rotate(180deg);
+}

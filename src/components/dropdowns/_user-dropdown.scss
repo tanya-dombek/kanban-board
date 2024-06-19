@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.user-dropdown-wrapper {
+    position: absolute;
+    top: 50px;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+
+    .dropdown-arrow {
+        width: 11px;
+        height: 11px;
+        background-color: $task-background;
+        transform: rotate(45deg);
+        position: relative;
+        top: -5px;
+        right: -20px;
+    }
+
+    .user-dropdown {
+        background-color: $task-background;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000;
+        width: 134px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        top: -17px;
+
+        a {
+            @include font-style(14px, $main-font-color, 16.41px);
+            padding: 7px;
+            width: 100%;
+
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
+    }
+  }
+  
+  
+  
+  
+
+   

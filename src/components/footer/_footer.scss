@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+footer {
+    background-color: $header-background;
+    @include font-style(18px, $header-font-color, 21.09px);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px;
+
+    div {
+        display: flex;
+        gap: 36px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    footer {
+        display: none;
+    }
+}

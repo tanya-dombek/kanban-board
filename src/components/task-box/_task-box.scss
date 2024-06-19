@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.task-box {
+    background-color: $task-box-background;
+    width: 282px;
+    max-height: 80vh;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 12px;
+    @include font-style(18px, $main-font-color, 21.09px);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include scroll-style($task-box-background);
+    margin-bottom: auto;
+
+    .tasks-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .task {
+            @include task-field;
+            cursor: pointer;
+        }
+    }
+
+    input {
+        @include input-styles;
+
+        &::placeholder {
+            color: $add-btn-font-color;
+        }
+    }
+}
+
